@@ -6,7 +6,7 @@ admin.autodiscover()
 
 app_name = 'django_x509'
 urlpatterns = [
-    re_path(r'^', include('django_x509.urls')),
+    re_path(r'^', include('django_x509.urls', namespace='x509')),
     re_path(r'^admin/', admin.site.urls),
 ]
 
