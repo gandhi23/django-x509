@@ -9,7 +9,7 @@ urlpatterns = [
     url(r'^admin', admin.site.urls),
     # django-x509 urls
     # keep the namespace argument unchanged
-    url(r'^.*?', include('django_x509.urls', namespace='x509')),
+    url(r'^.*?', include('django_x509.urls', namespace='x509', app_name='django_x509')),
 ]
 
 urlpatterns += staticfiles_urlpatterns()
