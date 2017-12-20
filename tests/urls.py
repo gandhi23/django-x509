@@ -5,12 +5,12 @@ from django.contrib.staticfiles.urls import staticfiles_urlpatterns
 admin.autodiscover()
 
 
-app_name = 'admin'
+app_name = 'x509'
 urlpatterns = [
     url(r'^admin/', admin.site.urls),
     # django-x509.urls
     # keep the namespace argument unchanged
-    url(r'^', include('django_x509.urls', name='x509')),
+    url(r'^', include('django_x509.urls', namespace='x509')),
 ]
 
 urlpatterns += staticfiles_urlpatterns()
