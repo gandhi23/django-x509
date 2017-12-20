@@ -2,7 +2,7 @@ import collections
 import uuid
 from datetime import datetime, timedelta
 
-import OpenSSL
+from OpenSSL import crypto
 from django.core.exceptions import ValidationError
 from django.db import models
 from django.utils import timezone
