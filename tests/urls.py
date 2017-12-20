@@ -5,6 +5,7 @@ from django.urls import include, path
 admin.autodiscover()
 
 
+app_name='x509'
 urlpatterns = [
     path('admin', admin.site.urls),
     # django-x509.urlS
