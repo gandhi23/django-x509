@@ -141,8 +141,6 @@ class BaseX509(models.Model):
 
     def __str__(self):
         return self.name
-        with open(self.cert, "r") as my_cert_file:
-            my_cert_text = my_cert_file.read()
 
 
     def clean_fields(self, *args, **kwargs):
@@ -185,7 +183,7 @@ class BaseX509(models.Model):
         returns an instance of OpenSSL.crypto.X509
         """
         if self.certificate:
-            return crypto.load_certificate(crypto.FILETYPE_PEM, my_cert_text)
+            return crypto.load_certificate(crypto.FILETYPE_PEM, self.text)
 
     @cached_property
     def x509_text(self):
