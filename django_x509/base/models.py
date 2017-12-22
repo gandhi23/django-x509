@@ -142,7 +142,6 @@ class BaseX509(models.Model):
     def __str__(self):
         return self.name
 
-
     def clean_fields(self, *args, **kwargs):
         # importing existing certificate
         # must be done here in order to validate imported fields
