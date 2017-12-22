@@ -182,8 +182,7 @@ class BaseX509(models.Model):
         returns an instance of OpenSSL.crypto.X509
         """
         if self.certificate:
-            certificate = open(self.certificate, 'w')
-            return crypto.load_certificate(crypto.FILETYPE_PEM, certificate)
+            return self.certificate
 
     @cached_property
     def x509_text(self):
