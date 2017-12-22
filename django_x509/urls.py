@@ -1,8 +1,8 @@
-from django.urls import path
+from django.urls import re_path
 
 from . import views
 
 app_name = 'django_x509'
 urlpatterns = [
-    path(r'^x509/ca/(?P<pk>[^/]+).crl$', views.crl, name='crl'),
+    re_path(r'^x509/ca/(?P<pk>[^/]+).crl$', views.crl, name='crl'),
 ]
